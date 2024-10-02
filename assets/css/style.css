@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font;
+    color: #171717;
+    list-style-type: none;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+body {
+    background: #FAFDF2;
+}
+
+:root {
+    --white: #ffffff;
+    ---black: #262626;
+    --gray: #333333;
+    --green: #234338;
+    --acic: #CBEA7B;
+}
+
+.container {
+    max-width: 1596px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: font;
+    src: url('../fonts/Urbanist/Urbanist-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+h1 {
+    font-size: 48px;
+    color: var(---black);
+    font-weight: 700;
+
+}
+
+p {
+    font-size: 18px;
+    color: var(--gray);
+    font-weight: 400;
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+/* header */
+
+.header {
+    background: var(--green);
+    padding: 20px 0;
+    width: 100%;
+}
+
+.logo {
+    height: 45px;
+}
+
+.logo:hover {
+    opacity: 0.9;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .nav {
+    display: flex;
+    gap: 26px;
+    align-items:center;
+}
+
+.menu-item {
+    font-size: 18px ;
+    font-weight: 600;
+    color: var(--white)
+}
+
+.menu-item:hover {
+    color: var(--acic);
+}   
+
+.dropdown {
+    position: relative;
+}
+
+
+#dropdownContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 32px;
+    width: 64px;
+    height: 100px;
+    border-radius: 4px;
+    background:#CBEA7B;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
+
+
+/* 1 блок */
+
+.b1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+h1, .b1-subtitle {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 200px;
+    margin-bottom: 10px;
+}
+
+.b1-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gray);
+    margin-bottom: 80px;
+}
+
+.review-title {
+    border: 1.5px solid #EEF8D3;
+    padding: 40px;
+    border-radius: 12px 12px 0 0;
+}
+
+.review-title .box-text {
+    padding: 40px;
+}
+
+.b1-person {
+    background: #F6FBE9;
+    padding: 40px;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.b1-person:hover {
+    transition: 700ms;
+    filter: brightness(97%);
+}
+
+.person-name {
+    color: var(--green);
+    font-weight: 600;
+}
+
+
+/* табы для тарифов*/
+
+.text_about_price {
+    color: var(--Grey-20, #333);
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        max-width: 960px;
+        margin-bottom: 80px;
+}
+
+.price .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-silder {
+    margin-bottom: 50px;
+}
+
+
+.price-swticher {
+    margin-bottom: 80px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--Green-80, #DCF1A7);
+}
+
+.price-switch {
+    display: flex;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    color: #4C4C4C;
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.price-switch.actice {
+    background:  #234338;
+    border: transparent;
+    color: #fff;
+}
+
+
+/* тарифы  */
+
+.price {
+    font-family: font, Arial, Helvetica, sans-serif;
+}
+
+.tarifs {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.tarifs-card {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    border-radius: 12px;
+    border: 1px solid  #EEF8D3;
+    background:  #F6FBE9;
+}
+
+.tarifs h2 {
+    color:  #262626;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.sale-tag {
+    color: #4C4C4D;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%; 
+}
+
+.tafif-text {
+    color:  #262626;
+font-size: 18px;
+font-weight: 500;
+line-height: 150%; 
+}
+
+.tarif-price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #2C5446;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 87.523%; 
+}
+
+.month {
+    color:#333;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%; 
+}
+
+.tarifs-card a {
+    border-radius: 8px;
+    background: #CBEA7B;
+    display: flex;
+    padding: 18px 41px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #262626;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* вкладки */
+
+.active-btn {
+    border-radius: 6px;
+    background: #234338;
+    color: #fff;
+} 
+
+.tap_text {
+    visibility: hidden;
+    position: absolute;
+}
+
+.tap_text.active {
+    visibility: visible;
+}
+
+
+/* faq */
+
+.faq {
+    margin-top: 700px;
+    margin-bottom: 128px;
+}
+
+.faq_box_text {
+    display: flex;
+    padding: 0px 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 80px;
+}
+
+.faq_box_text h3 {
+    color: #262626;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.faq_box_text p {
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.faq_main_box {
+    display: flex;
+    padding: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    border-radius: 12px;
+    border: 1px solid #E5F5BD;
+    background: #F6FBE9;
+}
+
+.accordeon {
+    width: 100%;
+}
+
+.accordeon_box {
+    width: 100%;
+    margin-bottom: 28px;
+    cursor: pointer;
+}
+
+.name_acc p {
+    color: #262626;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.name_acc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordeon_text {
+    color: #333;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%; 
+
+    max-height: 0px;
+    opacity: 0;
+    transform: translateY(-16px);
+    transition: transform 0.3s ease , max-height 0.1s ease;
+}
+
+.accordeon_text.visible {
+    max-height: 100%;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: #E5F5BD;
+}
+
+
+/* модальное окно */
+
+.modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal .container {
+    position: relative;
+}
+
+.modal_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 50px 271px;
+    align-items: flex-start;
+    gap: 40px;
+    border-radius: 0px 0px 12px 12px;
+    background: #1A3129;
+    border-radius:44px;
+}
+
+.modal_card {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid #2C5446;
+    background:  #234338;
+
+}
+.modal_cardtext {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%; 
+}
+
+.close {
+    width: 64px;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.close svg {
+    width: 100%;
+}
+
+/* phone */
+
+
+.phone {
+    padding: 8px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    gap: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--Dark-Green-25, #2C5446);
+}
+
+
+.phone_container {
+    display: flex;
+    align-items: center;
+}
+
+.phone-text {
+    color: #CBEA7B;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;  
+}
+
+.plus :hover rect {
+    fill: #3a9173;
+}
